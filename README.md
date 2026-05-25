@@ -8,7 +8,7 @@ Desde Claude Code (App o CMD):
 
 ```
 /plugin marketplace add TAXTIC/claude-plugins-taxtic
-/plugin install <nombre-plugin>@claude-plugins-taxtic
+/plugin install <nombre-plugin>@plugins-taxtic
 ```
 
 ## Plugins disponibles

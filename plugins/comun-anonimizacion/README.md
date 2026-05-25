@@ -11,7 +11,7 @@ Plugin transversal de seguridad para el equipo Taxtic.
 ## Instalación
 
 ```
-/plugin install comun-anonimizacion@claude-plugins-taxtic
+/plugin install comun-anonimizacion@plugins-taxtic
 ```
 
 ## Uso
