@@ -1,0 +1,6 @@
+{
+  "name": "comun-anonimizacion",
+  "version": "0.1.0",
+  "description": "Anonimización de RUTs, nombres y montos. Hooks pre-prompt y post-edit que alertan ante datos sensibles.",
+  "author": { "name": "TAXTIC", "url": "https://github.com/TAXTIC" }
+}

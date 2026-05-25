@@ -1,0 +1,34 @@
+{
+  "name": "claude-plugins-taxtic",
+  "owner": {
+    "name": "TAXTIC",
+    "url": "https://github.com/TAXTIC"
+  },
+  "plugins": [
+    {
+      "name": "comun-anonimizacion",
+      "source": "./plugins/comun-anonimizacion",
+      "description": "Anonimización de RUTs, nombres y montos. Hooks de seguridad para datos sensibles."
+    },
+    {
+      "name": "contabilidad-facturas",
+      "source": "./plugins/contabilidad-facturas",
+      "description": "Extracción, clasificación y auditoría de facturas PDF."
+    },
+    {
+      "name": "contabilidad-conciliacion",
+      "source": "./plugins/contabilidad-conciliacion",
+      "description": "Conciliación bancaria y detección de anomalías."
+    },
+    {
+      "name": "rrhh-planilla",
+      "source": "./plugins/rrhh-planilla",
+      "description": "Validación y comparación de planillas de remuneraciones."
+    },
+    {
+      "name": "asesoria-normativa",
+      "source": "./plugins/asesoria-normativa",
+      "description": "Resúmenes de circulares SII, checklist F29 y consultor tributario."
+    }
+  ]
+}
