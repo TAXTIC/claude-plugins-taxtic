@@ -3,6 +3,8 @@ name: checklist-f29
 description: Genera un checklist de revisión pre-envío del Formulario 29 (IVA y retenciones mensual) según el giro y características del cliente. Útil para evitar errores comunes en cierres mensuales.
 ---
 
+**Idioma de respuesta:** siempre en español chileno. Terminología contable/tributaria local. Todo el output (resúmenes, validaciones, mensajes de error, comentarios) en español. Solo cambiar de idioma si el usuario lo solicita explícitamente.
+
 # Checklist F29
 
 Cuando el usuario invoca este skill (palabras gatillo: "checklist F29", "qué reviso antes de declarar F29", "F29 cierre mensual"), genera un checklist contextualizado.

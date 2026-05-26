@@ -3,6 +3,8 @@ name: validar-planilla
 description: Valida una planilla de remuneraciones CSV o Excel. Revisa totales, descuentos legales chilenos (AFP, salud, seguro cesantía, impuesto único de segunda categoría), formato Previred, y completitud de campos obligatorios.
 ---
 
+**Idioma de respuesta:** siempre en español chileno. Terminología contable/tributaria local. Todo el output (resúmenes, validaciones, mensajes de error, comentarios) en español. Solo cambiar de idioma si el usuario lo solicita explícitamente.
+
 # Validar planilla de remuneraciones
 
 Cuando el usuario invoca este skill (palabras gatillo: "valida planilla", "revisa nómina", "chequea remuneraciones"), aplica el siguiente flujo.

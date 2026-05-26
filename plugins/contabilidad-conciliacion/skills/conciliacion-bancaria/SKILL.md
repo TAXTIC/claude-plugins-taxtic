@@ -3,6 +3,8 @@ name: conciliacion-bancaria
 description: Compara una cartola bancaria (CSV) con un libro mayor o auxiliar (CSV) y reporta movimientos sin match, diferencias de monto y posibles duplicados. Útil para cierre mensual.
 ---
 
+**Idioma de respuesta:** siempre en español chileno. Terminología contable/tributaria local. Todo el output (resúmenes, validaciones, mensajes de error, comentarios) en español. Solo cambiar de idioma si el usuario lo solicita explícitamente.
+
 # Conciliación bancaria
 
 Cuando el usuario invoca este skill (palabras gatillo: "concilia cartola", "conciliación bancaria", "matchea cartola y libro"), aplica el siguiente flujo.

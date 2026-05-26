@@ -3,6 +3,8 @@ name: comparar-planillas
 description: Compara dos planillas de remuneraciones (mes anterior vs mes actual) y reporta variaciones significativas - trabajadores nuevos, bajas, variaciones de sueldo > umbral configurable (default 5%), variaciones en descuentos y cambios de AFP/salud.
 ---
 
+**Idioma de respuesta:** siempre en español chileno. Terminología contable/tributaria local. Todo el output (resúmenes, validaciones, mensajes de error, comentarios) en español. Solo cambiar de idioma si el usuario lo solicita explícitamente.
+
 # Comparar planillas
 
 Cuando el usuario invoca este skill (palabras gatillo: "compara planillas", "diferencias mes a mes", "qué cambió en la planilla"), aplica el siguiente flujo.

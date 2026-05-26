@@ -3,6 +3,8 @@ name: anonimizar
 description: Anonimiza datos sensibles chilenos en texto, archivos o snippets - RUTs (con o sin guión, con o sin DV), nombres de personas o empresas, y montos. Útil ANTES de pegar contenido en chats, prompts o documentos compartidos.
 ---
 
+**Idioma de respuesta:** siempre en español chileno. Terminología contable/tributaria local. Todo el output (resúmenes, validaciones, mensajes de error, comentarios) en español. Solo cambiar de idioma si el usuario lo solicita explícitamente.
+
 # Anonimizar datos sensibles
 
 Cuando el usuario invoca este skill (palabras gatillo: "anonimiza", "anonimizar", "limpia datos", "saca el RUT", "tapa nombres"), aplica las siguientes transformaciones al texto, archivo o snippet entregado.

@@ -3,6 +3,8 @@ name: extractor-facturas
 description: Extrae datos estructurados de uno o varios PDFs de facturas chilenas (electrónicas o impresas escaneadas) a CSV. Detecta número, fecha de emisión, RUT proveedor, razón social, neto, IVA y total. Útil para ingreso masivo, declaración F29, conciliación con libro de compras.
 ---
 
+**Idioma de respuesta:** siempre en español chileno. Terminología contable/tributaria local. Todo el output (resúmenes, validaciones, mensajes de error, comentarios) en español. Solo cambiar de idioma si el usuario lo solicita explícitamente.
+
 # Extraer facturas a CSV
 
 Cuando el usuario invoca este skill (palabras gatillo: "extrae facturas", "facturas a csv", "procesa estos PDFs", "leeme las facturas de esta carpeta"), realiza el siguiente flujo.

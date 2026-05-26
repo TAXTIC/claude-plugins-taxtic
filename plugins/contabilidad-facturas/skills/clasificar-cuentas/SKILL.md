@@ -3,6 +3,8 @@ name: clasificar-cuentas
 description: Sugiere cuenta contable según el Plan Único de Cuentas chileno (PUC) para cada factura o glosa. Acepta CSV de facturas o lista de glosas. Devuelve sugerencia con código de cuenta y confianza.
 ---
 
+**Idioma de respuesta:** siempre en español chileno. Terminología contable/tributaria local. Todo el output (resúmenes, validaciones, mensajes de error, comentarios) en español. Solo cambiar de idioma si el usuario lo solicita explícitamente.
+
 # Clasificar facturas a cuenta contable
 
 Cuando el usuario invoca este skill (palabras gatillo: "clasifica estas facturas", "qué cuenta uso", "sugiere cuenta contable"), aplica el siguiente flujo.

@@ -3,6 +3,8 @@ name: resumen-circular-sii
 description: Genera un resumen estructurado de una circular, resolución o documento normativo del SII (Servicio de Impuestos Internos chileno) en formato PDF o URL pública. Extrae - tema, alcance, fecha vigencia, principales obligaciones, impactos prácticos para contadores, contribuyentes afectados, plazos clave.
 ---
 
+**Idioma de respuesta:** siempre en español chileno. Terminología contable/tributaria local. Todo el output (resúmenes, validaciones, mensajes de error, comentarios) en español. Solo cambiar de idioma si el usuario lo solicita explícitamente.
+
 # Resumen circular SII
 
 Cuando el usuario invoca este skill (palabras gatillo: "resume esta circular SII", "qué dice esta resolución", "impacto de esta normativa"), aplica el siguiente flujo.
