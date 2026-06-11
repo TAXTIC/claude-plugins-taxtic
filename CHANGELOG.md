@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Plugin `contabilidad-rendiciones`: skill `/extractor-rendiciones` (PDFs de caja chica → CSV + Excel, con columna `Pagina`, hojas resumen usadas como control, filas `NO_PROCESADO` para PDFs ilegibles) y agente `auditor-rendiciones` (resumen global + CRÍTICO/ADVERTENCIA/INFO sobre el CSV).
+- `contabilidad-rendiciones` v0.2.0: agente `extractor-rendicion-pdf` (procesa un PDF en contexto aislado, lectura página por página vía split con `pypdf`) y el skill `/extractor-rendiciones` pasa a orquestador (un agente por PDF). Evita saturar el contexto y el límite de 32 MB por request con escaneos pesados.
 
 ## [0.1.0] - 2026-05-25
 
