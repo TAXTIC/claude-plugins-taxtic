@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Plugin `contabilidad-rendiciones`: skill `/extractor-rendiciones` (PDFs de caja chica → CSV + Excel, con columna `Pagina`, hojas resumen usadas como control, filas `NO_PROCESADO` para PDFs ilegibles) y agente `auditor-rendiciones` (resumen global + CRÍTICO/ADVERTENCIA/INFO sobre el CSV).
+
 ## [0.1.0] - 2026-05-25
 
 ### Added
