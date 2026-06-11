@@ -29,6 +29,11 @@
       "name": "asesoria-normativa",
       "source": "./plugins/asesoria-normativa",
       "description": "Resúmenes de circulares SII, checklist F29 y consultor tributario."
+    },
+    {
+      "name": "contabilidad-rendiciones",
+      "source": "./plugins/contabilidad-rendiciones",
+      "description": "Extracción y auditoría de rendiciones de caja chica (PDF) a CSV + Excel."
     }
   ]
 }
