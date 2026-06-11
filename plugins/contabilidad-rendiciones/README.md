@@ -11,8 +11,11 @@ primero con `/anonimizar` (plugin `comun-anonimizacion`).
 
 ## Componentes
 
-- **Skill `/extractor-rendiciones`** — PDFs de caja chica → `resumen-rendiciones.csv` + `.xlsx`.
-  Salta las hojas resumen y las usa como control de totales.
+- **Skill `/extractor-rendiciones`** (orquestador) — PDFs de caja chica → `resumen-rendiciones.csv` +
+  `.xlsx`. Despacha un agente por PDF para no saturar el contexto con escaneos pesados. Salta las
+  hojas resumen y las usa como control de totales.
+- **Agent `extractor-rendicion-pdf`** — procesa un PDF en contexto aislado y devuelve solo las filas
+  (lee página por página si el PDF es grande). Lo usa el skill, no se invoca a mano normalmente.
 - **Agent `auditor-rendiciones`** — audita el CSV: resumen global + hallazgos CRÍTICO/ADVERTENCIA/INFO.
 
 ## Instalación
@@ -47,4 +50,4 @@ Descripcion, CentroCosto, Neto, IVA, Total, Observacion`.
 
 ## Versión
 
-0.1.0
+0.2.0
