@@ -1,0 +1,49 @@
+#!/bin/sh
+# Valida el formato de los mensajes de commit del repo.
+# Estructura exigida: [gitmoji] tipo(scope opcional): descripción en imperativo minúscula.
+#   tipos: feat|fix|docs|refactor|chore|test|style|perf|release|remove|init
+# Rechaza además firmas/marcas de agua de herramientas de IA en el mensaje.
+# No usa grep -P (falla con locale vacío en Git Bash); usa case + grep -E.
+
+msg_file="$1"
+first_line=$(head -n1 "$msg_file")
+
+# Permitir commits de merge/revert/fixup automáticos.
+case "$first_line" in
+  "Merge "*|"Revert "*|"fixup! "*|"squash! "*) exit 0 ;;
+esac
+
+fail() {
+  echo "✗ Commit rechazado: $1"
+  echo "  Esperado: [gitmoji] tipo(scope opcional): descripción en imperativo minúscula"
+  echo "  Ejemplo:  ✨ feat(informe-tributario): agregar parser F29"
+  echo "  Gitmoji:  ✨feat 🐛fix 📝docs ♻️refactor 🔧chore ✅test 🎨style ⚡perf 🚀release 🔥remove"
+  echo "  Tu primera línea fue: $first_line"
+  exit 1
+}
+
+# 1) Prefijo: uno de los gitmoji permitidos + espacio.
+case "$first_line" in
+  '✨ '*|'🐛 '*|'📝 '*|'♻️ '*|'🔧 '*|'✅ '*|'🎨 '*|'⚡ '*|'🚀 '*|'🔥 '*|'🎉 '*) : ;;
+  *) fail "falta gitmoji válido al inicio." ;;
+esac
+
+# 2) Tras el emoji: tipo (scope opcional) ": " descripción. (ASCII → grep -E sirve en cualquier locale.)
+rest=${first_line#* }
+tipos='feat|fix|docs|refactor|chore|test|style|perf|release|remove|init'
+printf '%s' "$rest" | grep -qE "^($tipos)(\([a-zA-Z0-9._-]+\))?: .+" \
+  || fail "estructura 'tipo(scope): descripción' inválida."
+
+# 3) Descripción en minúscula (primer carácter tras ': ' no mayúscula).
+desc=${rest#*: }
+case "$desc" in
+  [A-Z]*) fail "la descripción debe empezar en minúscula: '$desc'" ;;
+esac
+
+# 4) Rechazar firmas/marcas de agua de herramientas de IA en el mensaje.
+if grep -qiE 'co-authored-by: *claude|generated with .*claude|generated with \[claude|🤖 generated' "$msg_file"; then
+  echo "✗ Commit rechazado: el mensaje no debe incluir firmas ni marcas de agua de herramientas de IA."
+  exit 1
+fi
+
+exit 0
