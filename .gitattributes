@@ -1,0 +1,2 @@
+# Los hooks son scripts sh: forzar LF siempre (CRLF rompe el shebang en Windows).
+.githooks/** text eol=lf
