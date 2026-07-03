@@ -20,6 +20,7 @@ Desde Claude Code (App o CMD):
 | `contabilidad-conciliacion` | Contabilidad | Conciliación bancaria CSV vs libro. Detecta anomalías. |
 | `rrhh-planilla` | RRHH | Valida planilla remuneraciones. Compara mes vs mes. |
 | `asesoria-normativa` | Asesoría | Resúmenes circulares SII. Checklist F29. Q&A normativa. |
+| `contabilidad-rendiciones` | Contabilidad | Extrae rendiciones de caja chica (PDF) a CSV + Excel. Audita coherencia. |
 
 ## Soporte
 
