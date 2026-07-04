@@ -34,6 +34,11 @@
       "name": "contabilidad-rendiciones",
       "source": "./plugins/contabilidad-rendiciones",
       "description": "Extracción y auditoría de rendiciones de caja chica (PDF) a CSV + Excel."
+    },
+    {
+      "name": "asesoria-informe-tributario",
+      "source": "./plugins/asesoria-informe-tributario",
+      "description": "Informe tributario (F29, F22, balance, ficha, malla) en Word + Excel. Extracción determinista en Python; la IA no inventa cifras."
     }
   ]
 }
